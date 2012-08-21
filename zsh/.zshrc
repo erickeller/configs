@@ -34,6 +34,9 @@ plugins=(git svn)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_aliases
+# customize prompt
+PROMPT=%m@$PROMPT
+
 # Customize to your needs...
 export DeploymentPath=~/Work/Deployment/ubu_10.04/
 export LD_LIBRARY_PATH=$DeploymentPath/lib
