@@ -34,6 +34,7 @@ plugins=(git svn)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_aliases
+source ~/.my_aliases
 # customize prompt
 PROMPT=%m@$PROMPT
 
@@ -41,4 +42,4 @@ PROMPT=%m@$PROMPT
 export DeploymentPath=~/Work/Deployment/ubu_10.04/
 export LD_LIBRARY_PATH=$DeploymentPath/lib
 
-export PATH=/usr/share/centrifydc/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export PATH=/usr/share/centrifydc/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/users/kellere5/Work/TEE-CLC-10.0.0:~/workspace/ibench
