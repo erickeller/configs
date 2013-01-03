@@ -33,8 +33,7 @@ zstyle ':completion:*' special-dirs true
 plugins=(git git-extras svn per-directory-history.plugin)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.bash_aliases
-source ~/.my_aliases
+source ~/.zsh_aliases
 # customize prompt
 PROMPT=%m@$PROMPT
 
