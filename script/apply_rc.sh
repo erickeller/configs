@@ -10,7 +10,7 @@ pushd $SCRIPTDIR > /dev/null
 
 CONFIG_DIR=`dirname $(pwd)`
 echo "CONFIG_DIR: ${CONFIG_DIR}"
-DOT_CONFIGURATION=`find ${CONFIG_DIR} -type f \( -iname ".*rc" -o -iname ".*conf" \)`
+DOT_CONFIGURATION=`find ${CONFIG_DIR} -type f \( -iname ".*rc" -o -iname ".*conf" -o -iname "*aliases" \)`
 echo "DOT_CONFIGURATION: ${DOT_CONFIGURATION}"
 for config in ${DOT_CONFIGURATION};
 do
