@@ -21,7 +21,7 @@ do
 		echo "configuration already exists..."
 	else
 		echo "linking configuration..."
-		ln -s ${config} ~/${CONFIG_NAME}
+		ln -sf ${config} ~/${CONFIG_NAME}
 	fi
 done
 
