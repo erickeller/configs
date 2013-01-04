@@ -3,7 +3,7 @@ alias c="cd ~/configs"
 alias vi="vim"
 alias tmuxa="tmux attach"
 alias tmuxd="tmux detach"
-
+alias s="echo sourcing zshrc; source ~/.zshrc"
 # git
 alias gits='git status'
 alias gitlol='git log --oneline'
@@ -15,4 +15,9 @@ alias ptxg='ptxdist-2011.11.0 go'
 alias ptxg2='ptxg && ptxg'
 alias ptxi='ptxdist-2011.11.0 images'
 alias ptxkc='ptxdist-2011.11.0 kernelconfig'
+
+# remote desktop
+# barcelona
+alias rwin='rdesktop tromwv0098 -g 1920x1174 -D -K -d RBAMOUSER -a 24 &; sleep 1;wmctrl -r rdesktop -t 1'
+alias rwin2='rdesktop tromwd0257 -g 1024x768 -D -K -d RBAMOUSER -a 24 &; sleep 1;wmctrl -r rdesktop -t 1'
 
