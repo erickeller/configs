@@ -19,6 +19,6 @@ alias ptxkc='ptxdist-2011.11.0 kernelconfig'
 # remote desktop
 # barcelona
 alias rwin='rdesktop tromwv0098.emea.roche.com -g 1920x1174 -D -K -d RBAMOUSER -a 24 -u kellere5 &; sleep 1;wmctrl -r rdesktop -t 1'
-alias rwinlaptop='rdesktop tromwv0098.emea.roche.com -g 1280x1200 -D -K -d RBAMOUSER -a 24 -u kellere5 &'
+alias rwinlaptop='rdesktop tromwv0098.emea.roche.com -g 1280x900 -D -K -d RBAMOUSER -a 24 -u kellere5 &'
 alias rwin2='rdesktop tromwd0257.emea.roche.com -g 1024x768 -D -K -d RBAMOUSER -a 24 -u kellere5 &; sleep 1;wmctrl -r rdesktop -t 1'
 
