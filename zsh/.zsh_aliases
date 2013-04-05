@@ -22,6 +22,7 @@ alias rwin='rdesktop tromwv0098.emea.roche.com -g 1920x1174 -D -K -d RBAMOUSER -
 alias rwinlaptop='rdesktop tromwv0098.emea.roche.com -g 1280x900 -D -K -d RBAMOUSER -a 24 -u kellere5 -r clipboard:CLIPBOARD -r disk:hpqc=$HOME/hpqc -r disk:work=$HOME/workspace -r disk:media=/media &'
 alias rwin2='rdesktop tromwd0257.emea.roche.com -g 1024x768 -D -K -d RBAMOUSER -a 24 -u kellere5 -r clipboard:CLIPBOARD -r disk:hpqc=$HOME/hpqc -r disk:work=$HOME/workspace -r disk:media=/media &; sleep 1;wmctrl -r rdesktop -t 1'
 alias ssh="ssh -o 'StrictHostKeyChecking no'"
-alias dknownhost="sed -i '${host_line}d' ~/.ssh/known_hosts"
+alias dkhost="sed -i '${host_line}d' ~/.ssh/known_hosts"
 alias gitnk="git --no-pager log --pretty=oneline --all --decorate -30 --graph --abbrev-commit"
 alias rtunnel="sudo /etc/tunnel/tunnel.sh"
+alias ctunnel="ssh -p 10101 kellere5@localhost"
