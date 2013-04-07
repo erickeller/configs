@@ -37,3 +37,7 @@ function! Preserve(command)
     let @/=_s
     call cursor(l, c)
 endfunction
+" put syntax coloration on
+syntax on
+
+
