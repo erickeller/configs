@@ -38,7 +38,9 @@ source ~/.zsh_aliases
 PROMPT=%m@$PROMPT
 
 # Customize to your needs...
-export DeploymentPath=~/Work/Deployment/ubu_`cat /etc/lsb-release | grep RELEASE | cut -d '=' -f2`/
-export LD_LIBRARY_PATH=$DeploymentPath/lib
-
+if [ -e /etc/lsb-release ]
+then
+    export DeploymentPath=~/Work/Deployment/ubu_`cat /etc/lsb-release | grep RELEASE | cut -d '=' -f2`/
+    export LD_LIBRARY_PATH=$DeploymentPath/lib
+fi
 export PATH=/usr/share/centrifydc/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/users/kellere5/Work/TEE-CLC-10.0.0:~/workspace/ibench
