@@ -27,4 +27,5 @@ alias dkhost="sed -i '${host_line}d' ~/.ssh/known_hosts"
 alias gitnk="git --no-pager log --pretty=oneline --all --decorate -30 --graph --abbrev-commit"
 alias rtunnel="sudo /etc/tunnel/tunnel.sh"
 alias ctunnel="ssh -p 10101 kellere5@localhost"
-
+# force zsh to ignore correction for pycsmbuilder command
+alias pycsmbuilder='nocorrect pycsmbuilder'

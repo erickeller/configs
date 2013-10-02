@@ -16,10 +16,11 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'majutsushi/tagbar.git'
 
-" tabstops are 4 spaces and expanded
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+" tabstops are 2 spaces and expanded
+set smarttab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 
 " strip trailing whitespaces with leader-sw and format file with leader-ff

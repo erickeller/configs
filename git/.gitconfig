@@ -1,5 +1,22 @@
 [color]
 	ui = true
+    diff = auto
+    status = auto
+    branch = auto
 [user]
 	name = Eric Keller
 	email = eric.keller.ek1@roche.com
+[alias]
+    st = status
+    co = checkout
+    ci = commit
+    clena = clean
+    rb = rebase
+[svn]
+    addAuthorFrom = true
+    useLogAuthor = true
+    rmdir = true
+[merge]
+    tool = kdiff3
+[gui]
+    gcwarning = false
