@@ -10,7 +10,7 @@ alias gitlol='git log --oneline'
 
 
 # ptxdist aliases
-alias ptxc='ptxdist-2011.11.0 clean rootfs && ptxdist-2011.11.0 clean roche_files'
+alias ptxc='ptxdist-2011.11.0 clean rootfs && ptxdist-2011.11.0 clean roche_files && ptxdist-2011.11.0 clean roche_files_development'
 alias ptxg='ptxdist-2011.11.0 go'
 alias ptxg2='ptxg && ptxg'
 alias ptxi='ptxdist-2011.11.0 images'
@@ -27,5 +27,9 @@ alias dkhost="sed -i '${host_line}d' ~/.ssh/known_hosts"
 alias gitnk="git --no-pager log --pretty=oneline --all --decorate -30 --graph --abbrev-commit"
 alias rtunnel="sudo /etc/tunnel/tunnel.sh"
 alias ctunnel="ssh -p 10101 kellere5@localhost"
+
 # force zsh to ignore correction for pycsmbuilder command
 alias pycsmbuilder='nocorrect pycsmbuilder'
+
+alias oldpc="cd /data/kellere5-troulwd0090"
+alias workspace="cd $HOME/workspace"
