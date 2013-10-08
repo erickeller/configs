@@ -24,6 +24,8 @@ set shiftwidth=2
 set expandtab
 
 " strip trailing whitespaces with leader-sw and format file with leader-ff
+" autocmd BufWritePre * :%s/\s\+$//e
+autocmd FileType c,cpp,java,js,in,py,txt,sh autocmd BufWritePre <buffer> :%s/\s\+$//e
 nnoremap <silent> <leader>sw :call Preserve("%s/\\s\\+$//e")<CR>
 nnoremap <silent> <leader>ff :call Preserve("normal gg=G")<CR>
 
@@ -40,5 +42,4 @@ function! Preserve(command)
 endfunction
 " put syntax coloration on
 syntax on
-
 
