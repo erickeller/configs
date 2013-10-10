@@ -23,6 +23,13 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 
+if has("autocmd")
+   filetype plugin indent on
+endif
+
+" automatically open tagbar
+autocmd FileType c,cpp,h,hpp nested TagbarOpen
+
 " strip trailing whitespaces with leader-sw and format file with leader-ff
 " autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType c,cpp,java,js,in,py,txt,sh autocmd BufWritePre <buffer> :%s/\s\+$//e
