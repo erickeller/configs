@@ -9,6 +9,9 @@ alias gits='git status'
 alias gitlol='git log --oneline'
 
 
+# ecp
+alias ecp='cd ~/workspace/ECPSystemManager/ECPSystemManager'
+
 # ptxdist aliases
 alias ptxc='ptxdist-2011.11.0 clean rootfs && ptxdist-2011.11.0 clean roche_files && ptxdist-2011.11.0 clean roche_files_development'
 alias ptxg='ptxdist-2011.11.0 go'
