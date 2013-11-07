@@ -20,3 +20,9 @@
     tool = kdiff3
 [gui]
     gcwarning = false
+[sendemail]
+  smtpencryption = tls
+  smtpserver = smtp.gmail.com
+  smtpuser = keller.eric@gmail.com
+  smtpserverport = 587
+
