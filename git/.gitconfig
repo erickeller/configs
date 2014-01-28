@@ -26,3 +26,5 @@
   smtpuser = keller.eric@gmail.com
   smtpserverport = 587
 
+[core]
+	editor = vi
