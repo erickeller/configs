@@ -12,6 +12,7 @@
     ci = commit
     clena = clean
     rb = rebase
+    ds = diff --staged
 [svn]
     addAuthorFrom = true
     useLogAuthor = true
