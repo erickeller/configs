@@ -13,6 +13,7 @@
     clena = clean
     rb = rebase
     whatadded = log --diff-filter=A
+    ds = diff --staged
 [svn]
     addAuthorFrom = true
     useLogAuthor = true
@@ -21,3 +22,11 @@
     tool = kdiff3
 [gui]
     gcwarning = false
+[sendemail]
+  smtpencryption = tls
+  smtpserver = smtp.gmail.com
+  smtpuser = keller.eric@gmail.com
+  smtpserverport = 587
+
+[core]
+	editor = vi
