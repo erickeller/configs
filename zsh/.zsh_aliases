@@ -30,6 +30,9 @@ alias ctunnel="ssh -p 10101 kellere5@localhost"
 
 # force zsh to ignore correction for pycsmbuilder command
 alias pycsmbuilder='nocorrect pycsmbuilder'
+alias viewer='eog'
 
 alias oldpc="cd /data/kellere5-troulwd0090"
 alias workspace="cd $HOME/workspace"
+alias upgrade="sudo apt-get update && sudo apt-get dist-upgrade"
+
