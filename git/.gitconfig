@@ -12,6 +12,7 @@
     ci = commit
     clena = clean
     rb = rebase
+    whatadded = log --diff-filter=A
     ds = diff --staged
 [svn]
     addAuthorFrom = true
