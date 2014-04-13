@@ -47,6 +47,13 @@ function! Preserve(command)
     let @/=_s
     call cursor(l, c)
 endfunction
+" Some Linux distributions set filetype in /etc/vimrc.
+" " Clear filetype flags before changing runtimepath to force Vim to reload
+" them.
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
 " put syntax coloration on
 syntax on
 
