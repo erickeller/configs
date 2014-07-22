@@ -43,4 +43,8 @@ alias upgrade="sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get 
 alias lxc-ls="sudo lxc-ls -f"
 alias lxc-stop="sudo lxc-stop -n"
 alias lxc-start="sudo lxc-start -d -n"
+alias lxc-attach="sudo lxc-attach -n"
+
+# i3 aliases
+alias i3lock="i3lock -i ~/Pictures/i3.lock.png"
 
