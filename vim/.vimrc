@@ -18,9 +18,9 @@ Bundle 'majutsushi/tagbar.git'
 
 " tabstops are 2 spaces and expanded
 set smarttab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 
 if has("autocmd")
