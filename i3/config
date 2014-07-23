@@ -162,3 +162,6 @@ bindsym $mod+minus scratchpad show
 
 # start network-manager applet
 exec --no-startup-id nm-applet
+
+# also define a keybinding
+bindsym $mod+u exec --no-startup-id setxkbmap us
