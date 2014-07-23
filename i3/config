@@ -159,3 +159,6 @@ bindsym $mod+Shift+minus move scratchpad
 #
 # # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
+
+# start network-manager applet
+exec --no-startup-id nm-applet
