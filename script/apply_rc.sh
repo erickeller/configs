@@ -16,7 +16,7 @@ for config in ${DOT_CONFIGURATION};
 do
 	CONFIG_NAME=`basename ${config}`
 	echo "configuration: ${config}"
-	if [ -f ${HOME}/${CONFIG_NAME} ] 
+	if [ -f ${HOME}/${CONFIG_NAME} ]
 	then
 		echo "configuration already exists..."
 	else
@@ -24,7 +24,7 @@ do
 		ln -sf ${config} ~/${CONFIG_NAME}
 	fi
 done
-
+ln -sf i3 ~/.i3
 popd > /dev/null
 exit 0
 
