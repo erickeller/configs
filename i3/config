@@ -165,3 +165,17 @@ exec --no-startup-id nm-applet
 
 # also define a keybinding
 bindsym $mod+u exec --no-startup-id setxkbmap us
+
+# set background picture
+exec "feh --bg-scale ~/.i3/pictures/background.png"
+
+# volume control (-:MOD + F2 +: MOD + F3 mute: MOD + F1)
+# in order to discover the key value use xev
+# bindcode $mod+F1 exec amixer set Master toggle
+# mute is currently not working
+# pactl set-sink-mute 0 0|1
+# pactl list sinks | grep -q Mute:.yes pactl set-sink-mute 0 ${PIPESTATUS[1]}
+bindcode $mod+68 exec amixer set Master 5%-
+bindcode $mod+69 exec amixer set Master 5%+
+
+#bindsym XF86AudioMute exec amixer set Master toggle
