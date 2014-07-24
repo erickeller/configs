@@ -49,3 +49,8 @@ alias lxc-attach="sudo lxc-attach -n"
 alias i3lock="i3lock -i ~/Pictures/i3.lock.png"
 alias docking="sudo xrandr --output LVDS --off && sudo xrandr --output DisplayPort-1 --auto"
 
+# lxc aliases
+alias lxc-ls="sudo lxc-ls -f"
+alias lxc-start="sudo lxc-start -n"
+alias lxc-stop="sudo lxc-stop -n"
+
