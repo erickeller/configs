@@ -156,7 +156,10 @@ bar {
 
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
-#
+
+# set background picture
+exec "feh --bg-scale ~/.i3/pictures/background.png"
+
 # # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
 
@@ -165,9 +168,6 @@ exec --no-startup-id nm-applet
 
 # also define a keybinding
 bindsym $mod+u exec --no-startup-id setxkbmap us
-
-# set background picture
-exec "feh --bg-scale ~/.i3/pictures/background.png"
 
 # volume control (-:MOD + F2 +: MOD + F3 mute: MOD + F1)
 # in order to discover the key value use xev
