@@ -39,6 +39,9 @@ bindsym $mod+d exec dmenu_run
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# execute aliases from the dmenu
+bindsym $mod+p exec "alias $(alias | cut -d '=' -f1 | dmenu -p Command) | sed -e 's/\([^=]*\)=//g' | tr -d \'"
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -120,7 +123,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # lock screen (lock the current session with the given picture)
-bindsym $mod+x exec "i3lock -i ~/.i3/pictures/bgd.png"
+bindsym $mod+x exec "i3lock --dpms -i ~/.i3/pictures/bgd.png"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -165,6 +168,7 @@ bindsym $mod+minus scratchpad show
 
 # start network-manager applet
 exec --no-startup-id nm-applet
+exec --no-startup-id /usr/libexec/gnome-settings-daemon
 
 # also define a keybinding
 bindsym $mod+u exec --no-startup-id setxkbmap us
