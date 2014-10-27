@@ -34,8 +34,12 @@ plugins=(git git-extras svn per-directory-history)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
+if grep -qa lxc /proc/1/cgroup 
+then
+  LXC_PROMPT="[LXC]"
+fi
 # customize prompt
-PROMPT=%m@$PROMPT
+PROMPT=$LXC_PROMPT%m@$PROMPT
 
 # Customize to your needs...
 if [ -e /etc/lsb-release ]
