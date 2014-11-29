@@ -25,7 +25,7 @@ alias rwin='rdesktop tromwv0098.emea.roche.com -g 1920x1065 -D -K -d RBAMOUSER -
 alias rwinlaptop='rdesktop tromwv0098.emea.roche.com -g 1280x900 -D -K -d RBAMOUSER -a 24 -u kellere5 -r clipboard:CLIPBOARD -r disk:hpqc=$HOME/hpqc -r disk:work=$HOME/workspace -r disk:media=/media &'
 alias rwinbeamer='rdesktop tromwv0098.emea.roche.com -g 1024x768 -D -K -d RBAMOUSER -a 24 -u kellere5 -r clipboard:CLIPBOARD -r disk:hpqc=/home/users/kellere5/hpqc -r disk:work=/home/users/kellere5/workspace -r disk:media=/media &'
 alias rwinmartin='rdesktop TROMWV0096.emea.roche.com -g 1024x768 -D -K -d RBAMOUSER -a 24 -u halderm -r clipboard:CLIPBOARD -r disk:media=/media &'
-alias ssh="ssh -o 'StrictHostKeyChecking no'"
+alias ssh="/usr/bin/ssh -o 'StrictHostKeyChecking no'"
 alias dkhost="sed -i '${host_line}d' ~/.ssh/known_hosts"
 alias gitnk="git --no-pager log --pretty=oneline --all --decorate -30 --graph --abbrev-commit"
 alias rtunnel="sudo /etc/tunnel/tunnel.sh"
@@ -54,3 +54,7 @@ alias lxc-ls="sudo lxc-ls -f"
 alias lxc-start="sudo lxc-start -n"
 alias lxc-stop="sudo lxc-stop -n"
 
+# docker aliases
+alias docker='sudo docker'
+
+alias 3xlr='cd ~/workspace/rlx3/bin'
