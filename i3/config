@@ -10,9 +10,9 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # windows key
-#set $mod Mod4
+set $mod Mod4
 # Alt key
-set $mod Mod1
+#set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -185,5 +185,10 @@ bindsym $mod+u exec --no-startup-id setxkbmap us
 # pactl list sinks | grep -q Mute:.yes pactl set-sink-mute 0 ${PIPESTATUS[1]}
 bindcode $mod+68 exec amixer set Master 5%-
 bindcode $mod+69 exec amixer set Master 5%+
+
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86Sleep exec sudo pm-suspend
+bindsym XF86Display exec
 
 #bindsym XF86AudioMute exec amixer set Master toggle
