@@ -189,7 +189,6 @@ bindcode $mod+69 exec amixer set Master 5%+
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86Sleep exec "i3lock --dpms -i ~/.i3/pictures/bgd.png; sudo pm-suspend"
-bindsym XF86Sleep exec sudo pm-suspend
-bindsym XF86Display exec
+bindsym XF86Display exec arandr
 
 #bindsym XF86AudioMute exec amixer set Master toggle
