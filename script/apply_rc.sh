@@ -58,7 +58,7 @@ popd > /dev/null
 }
 
 install_ohmyzsh
-install_i3
+#install_i3
 link_configuration
 
 exit 0
