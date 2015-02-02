@@ -50,7 +50,10 @@ do
 	fi
 done
 ln -sf ${CONFIG_DIR}/../i3 ~/.i3
-vim +PluginInstall +qall
+vim +PluginInstall +qall <<< "
+
+
+"
 popd > /dev/null
 }
 
