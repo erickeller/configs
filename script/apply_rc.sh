@@ -19,7 +19,7 @@ EOF"
 sudo apt-get update
 sudo apt-get --allow-unauthenticated install sur5r-keyring
 sudo apt-get update
-sudo apt-get install i3 -y
+sudo apt-get install i3 arandr feh -y
 }
 
 install_ohmyzsh()
