@@ -7,7 +7,7 @@ SCRIPTDIR=`dirname $0`
 install_packages()
 {
 sudo apt-get update
-sudo apt-get install vim git gitk git-gui tmux -y
+sudo apt-get install vim git gitk git-gui tmux autojump -y
 }
 
 install_i3()
@@ -57,6 +57,7 @@ vim +PluginInstall +qall <<< "
 popd > /dev/null
 }
 
+install_packages
 install_ohmyzsh
 #install_i3
 link_configuration
