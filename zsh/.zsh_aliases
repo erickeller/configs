@@ -59,3 +59,7 @@ alias lxc-stop="sudo lxc-stop -n"
 alias docker='sudo docker'
 
 alias 3xlr='cd ~/workspace/rlx3/bin'
+
+# salt aliases
+alias salt='sudo salt'
+
