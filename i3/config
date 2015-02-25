@@ -172,6 +172,7 @@ bindsym $mod+minus scratchpad show
 
 # start network-manager applet
 exec --no-startup-id nm-applet
+exec --no-startup-id gnome-sound-applet
 exec --no-startup-id /usr/libexec/gnome-settings-daemon
 
 # also define a keybinding
