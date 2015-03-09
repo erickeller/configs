@@ -4,13 +4,10 @@ alias vi="vim"
 alias tmuxa="tmux attach"
 alias tmuxd="tmux detach"
 alias s="echo sourcing zshrc; source ~/.zshrc"
+alias cd..="cd .."
 # git
 alias gits='git status'
 alias gitlol='git log --oneline'
-
-
-# ecp
-alias ecp='cd ~/workspace/ECPSystemManager/ECPSystemManager'
 
 # ptxdist aliases
 alias ptxc='ptxdist-2011.11.0 clean rootfs && ptxdist-2011.11.0 clean roche_files'
@@ -21,22 +18,21 @@ alias ptxkc='ptxdist-2011.11.0 kernelconfig'
 
 # remote desktop
 # barcelona
-alias rwin='rdesktop tromwv0098.emea.roche.com -g 1920x1065 -D -K -d RBAMOUSER -a 24 -u kellere5 -r clipboard:CLIPBOARD -r disk:hpqc=$HOME/hpqc -r disk:work=$HOME/workspace -r disk:media=/media -r sound:local &'
-alias rwinlaptop='rdesktop tromwv0098.emea.roche.com -g 1280x900 -D -K -d RBAMOUSER -a 24 -u kellere5 -r clipboard:CLIPBOARD -r disk:hpqc=$HOME/hpqc -r disk:work=$HOME/workspace -r disk:media=/media &'
-alias rwinbeamer='rdesktop tromwv0098.emea.roche.com -g 1024x768 -D -K -d RBAMOUSER -a 24 -u kellere5 -r clipboard:CLIPBOARD -r disk:hpqc=/home/users/kellere5/hpqc -r disk:work=/home/users/kellere5/workspace -r disk:media=/media &'
-alias rwinmartin='rdesktop TROMWV0096.emea.roche.com -g 1024x768 -D -K -d RBAMOUSER -a 24 -u halderm -r clipboard:CLIPBOARD -r disk:media=/media &'
+alias rwin='rdesktop $REMOTE_PC -g 1920x1065 -D -K -d RBAMOUSER -a 24 -u $USER -r clipboard:CLIPBOARD -r disk:hpqc=$HOME/hpqc -r disk:work=$HOME/workspace -r disk:media=/media -r sound:local &'
+alias rwinlaptop='rdesktop $REMOTE_PC -g 1280x900 -D -K -d RBAMOUSER -a 24 -u $USER -r clipboard:CLIPBOARD -r disk:hpqc=$HOME/hpqc -r disk:work=$HOME/workspace -r disk:media=/media &'
+alias rwinbeamer='rdesktop $REMOTE_PC -g 1024x768 -D -K -d RBAMOUSER -a 24 -u $USER -r clipboard:CLIPBOARD -r disk:hpqc=/home/users/$USER/hpqc -r disk:work=/home/users/$USER/workspace -r disk:media=/media &'
+alias rwinmartin='rdesktop $REMOTE_PC_MAHA -g 1024x768 -D -K -d RBAMOUSER -a 24 -u $MUSER -r clipboard:CLIPBOARD -r disk:media=/media &'
 alias ssh="/usr/bin/ssh -o 'StrictHostKeyChecking no'"
 alias scp="/usr/bin/scp -o 'StrictHostKeyChecking no'"
 alias dkhost="sed -i '${host_line}d' ~/.ssh/known_hosts"
 alias gitnk="git --no-pager log --pretty=oneline --all --decorate -30 --graph --abbrev-commit"
 alias rtunnel="sudo /etc/tunnel/tunnel.sh"
-alias ctunnel="ssh -p 10101 kellere5@localhost"
+alias ctunnel="ssh -p 10101 $USER@localhost"
 
 # force zsh to ignore correction for pycsmbuilder command
 alias pycsmbuilder='nocorrect pycsmbuilder'
 alias viewer='eog'
 
-alias oldpc="cd /data/kellere5-troulwd0090"
 alias workspace="cd $HOME/workspace"
 alias upgrade="sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove"
 
@@ -57,8 +53,6 @@ alias lxc-stop="sudo lxc-stop -n"
 
 # docker aliases
 alias docker='sudo docker'
-
-alias 3xlr='cd ~/workspace/rlx3/bin'
 
 # salt aliases
 alias salt='sudo salt'
