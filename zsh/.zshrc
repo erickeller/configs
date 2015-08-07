@@ -30,7 +30,7 @@ zstyle ':completion:*' special-dirs true
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras svn per-directory-history autojump python history-substring-search command-not-found common-aliases)
+plugins=(git git-extras svn per-directory-history autojump python history-substring-search command-not-found common-aliases zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
@@ -38,8 +38,9 @@ if grep -qa lxc /proc/1/cgroup
 then
   LXC_PROMPT="[LXC]"
 fi
+
 # customize prompt
-PROMPT=$LXC_PROMPT%m@$PROMPT
+PROMPT="$LXC_PROMPT%m@$PROMPT"
 
 # Customize to your needs...
 if [ -e /etc/lsb-release ]

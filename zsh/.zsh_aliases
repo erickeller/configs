@@ -8,6 +8,7 @@ alias cd..="cd .."
 # git
 alias gits='git status'
 alias gitlol='git log --oneline'
+alias ging="echo '!.gitignore' > .gitignore"
 
 # ptxdist aliases
 alias ptxc='ptxdist-2011.11.0 clean rootfs && ptxdist-2011.11.0 clean roche_files'
@@ -56,4 +57,4 @@ alias docker='sudo docker'
 
 # salt aliases
 alias salt='sudo salt'
-
+alias rssh='~/workspace/rlx3/bin/rlx3-ssh'

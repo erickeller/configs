@@ -26,6 +26,7 @@ install_ohmyzsh()
 {
 echo "install ohmyzsh"
 wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+cd ~/.oh-my-zsh/custom/plugins && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 }
 
 #echo "script dir: $SCRIPTDIR"
