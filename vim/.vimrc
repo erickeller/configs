@@ -12,9 +12,24 @@ call vundle#rc()
 " required!
 Bundle 'gmarik/vundle'
 
+" search
+Bundle 'mileszs/ack.vim.git'
+
 " tree explorer
 Bundle 'scrooloose/nerdtree.git'
+Bundle 'vim-scripts/The-NERD-tree.git'
 Bundle 'majutsushi/tagbar.git'
+
+" python plugins
+Bundle 'ervandew/supertab.git'
+Bundle 'vim-scripts/pep8.git'
+Bundle 'fs111/pydoc.vim.git'
+Bundle 'mitechie/pyflakes-pathogen.git'
+Bundle 'wincent/Command-T.git'
+
+" git plugin
+Bundle 'tpope/vim-fugitive.git'
+Bundle 'Valloric/YouCompleteMe'
 
 " tabstops are 2 spaces and expanded
 set smarttab
@@ -55,10 +70,26 @@ endfunction
 " Some Linux distributions set filetype in /etc/vimrc.
 " " Clear filetype flags before changing runtimepath to force Vim to reload
 " them.
-filetype off
-filetype plugin indent off
+filetype on " try detect filetypes
 set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 " put syntax coloration on
 syntax on
 
+" pyflake
+let g:pyflakes_use_quickfix = 0
+" pep8
+let g:pep8_map='<leader>8'
+
+au FileType python set omnifunc=pythoncomplete#Complete
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt=menuone,longest,preview
+
+map <leader>j :RopeGotoDefinition<CR>
+map <leader>r :RopeRename<CR>
+
+filetype plugin indent off
+" search
+nmap <leader>a <Esc>:Ack!
+set spell
+set background=dark
