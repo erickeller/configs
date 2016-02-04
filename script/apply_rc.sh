@@ -7,7 +7,7 @@ SCRIPTDIR=`dirname $0`
 install_packages()
 {
 sudo apt-get update
-sudo apt-get install vim git gitk git-gui tmux autojump -y
+sudo apt-get -y install vim git gitk git-gui tmux autojump zsh
 }
 
 install_i3()
@@ -58,10 +58,19 @@ vim +PluginInstall +qall <<< "
 popd > /dev/null
 }
 
+you_complete_me()
+{
+    sudo apt-get install -y build-essential cmake python-dev
+    cd ~/.vim/bundle/YouCompleteMe
+    python ./install.py --clang-completer
+    cd -
+}
+
 install_packages
 install_ohmyzsh
 #install_i3
 link_configuration
+you_complete_me
 
 exit 0
 
