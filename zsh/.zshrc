@@ -53,3 +53,8 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/workspace/go
 
 export PATH=/usr/share/centrifydc/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/users/kellere5/Work/TEE-CLC-10.0.0:~/workspace/ibench:/usr/local/go/bin:$GOPATH/bin
+
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+  eval `ssh-agent -s`
+  ssh-add
+fi
