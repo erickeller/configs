@@ -175,6 +175,9 @@ exec --no-startup-id nm-applet
 exec --no-startup-id gnome-sound-applet
 exec --no-startup-id /usr/libexec/gnome-settings-daemon
 
+# disable nautilus desktop
+exec "gsettings set org.gnome.desktop.background show-desktop-icons false"
+
 # also define a keybinding
 bindsym $mod+u exec --no-startup-id setxkbmap us
 
