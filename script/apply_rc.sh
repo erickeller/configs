@@ -19,7 +19,12 @@ EOF"
 sudo apt-get update
 sudo apt-get --allow-unauthenticated install sur5r-keyring
 sudo apt-get update
-sudo apt-get install i3 arandr feh -y
+sudo apt-get install i3 arandr feh acpi -y
+# i3 notify when battery is low
+sudo ln -sf ${SCRIPTDIR}/low_battery.sh /usr/local/bin/low_battery.sh
+sudo sh -c "cat << EOF > /var/spool/cron/crontabs/low_battery
+*/15 * * * * /usr/local/bin/low_battery.sh
+EOF"
 }
 
 install_ohmyzsh()
