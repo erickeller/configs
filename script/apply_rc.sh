@@ -61,9 +61,11 @@ popd > /dev/null
 
 you_complete_me()
 {
+    # required for building clang for python3
+    export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python2.7/"
     sudo apt-get install -y build-essential cmake python-dev
     cd ~/.vim/bundle/YouCompleteMe
-    python ./install.py --clang-completer
+    python3 ./install.py --clang-completer
     cd -
 }
 
