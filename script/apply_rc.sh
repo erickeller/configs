@@ -9,7 +9,7 @@ CONFIG_DIR=${SCRIPTDIR}/..
 install_packages()
 {
 sudo apt-get update
-sudo apt-get -y install vim git gitk git-gui tmux autojump zsh
+sudo apt-get -y install vim-nox git gitk git-gui tig tmux autojump zsh
 }
 
 install_i3()
