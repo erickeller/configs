@@ -48,13 +48,8 @@ for config in ${DOT_CONFIGURATION};
 do
 	CONFIG_NAME=`basename ${config}`
 	echo "configuration: ${config}"
-	if [ -f ${HOME}/${CONFIG_NAME} ]
-	then
-		echo "configuration already exists..."
-	else
-		echo "linking configuration..."
-		ln -sf ${config} ~/${CONFIG_NAME}
-	fi
+	echo "forcing linking configuration..."
+	ln -sf ${config} ~/${CONFIG_NAME}
 done
 ln -sf ${CONFIG_DIR}/i3 ~/.i3
 vim +PluginInstall +qall <<< "
