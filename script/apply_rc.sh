@@ -2,7 +2,8 @@
 # this script applies the configuration
 # if some configuration file already exists, it makes a backup
 #
-SCRIPTDIR=`dirname $0`
+SCRIPTDIR=`cd $(dirname $0); pwd`
+CONFIG_DIR=${SCRIPTDIR}/..
 
 install_packages()
 {
@@ -39,7 +40,6 @@ link_configuration()
 {
 # make sure the script is always running from the same directory
 pushd $SCRIPTDIR > /dev/null
-CONFIG_DIR=`dirname $(pwd)`
 echo "CONFIG_DIR: ${CONFIG_DIR}"
 DOT_CONFIGURATION=`find ${CONFIG_DIR} -type f \( -iname ".*rc" -o -iname ".*conf" -o -iname "*aliases" -o -iname ".*config" \)`
 echo "DOT_CONFIGURATION: ${DOT_CONFIGURATION}"
@@ -55,7 +55,7 @@ do
 		ln -sf ${config} ~/${CONFIG_NAME}
 	fi
 done
-ln -sf ${CONFIG_DIR}/../i3 ~/.i3
+ln -sf ${CONFIG_DIR}/i3 ~/.i3
 vim +PluginInstall +qall <<< "
 
 
