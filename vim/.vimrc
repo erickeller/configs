@@ -36,6 +36,7 @@ set smarttab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+set backspace=2 " make backspace work like most other apps
 
 autocmd Filetype sh setlocal ts=4 sts=4 sw=4
 autocmd Filetype perl setlocal ts=4 sts=4 sw=4
