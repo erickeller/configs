@@ -2,6 +2,7 @@
 # this script applies the configuration
 # if some configuration file already exists, it makes a backup
 #
+source /etc/os-release
 SCRIPTDIR=`cd $(dirname $0); pwd`
 CONFIG_DIR=${SCRIPTDIR}/..
 
@@ -14,7 +15,7 @@ sudo apt-get -y install vim git gitk git-gui tmux autojump zsh
 install_i3()
 {
 sudo sh -c "cat << EOF > /etc/apt/sources.list.d/i3-wm.list
-deb http://debian.sur5r.net/i3/ trusty universe
+deb http://debian.sur5r.net/i3/ ${UBUNTU_CODENAME} universe
 EOF"
 # we've returned to our user account
 sudo apt-get update
