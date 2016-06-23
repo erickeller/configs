@@ -69,8 +69,14 @@ you_complete_me()
     cd -
 }
 
+default_zsh_gnome-terminal()
+{
+    sudo sh -c "sed -i 's#^Exec=gnome-terminal.*#Exec=gnome-terminal -x /bin/zsh#g' /usr/share/applications/gnome-terminal.desktop"
+}
+
 install_packages
 install_ohmyzsh
+default_zsh_gnome-terminal
 #install_i3
 link_configuration
 you_complete_me
