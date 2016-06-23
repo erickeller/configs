@@ -58,3 +58,5 @@ alias docker='sudo docker'
 # salt aliases
 alias salt='sudo salt'
 alias rssh='~/workspace/rlx3/bin/rlx3-ssh'
+# i3 xrandr setup work
+alias swork='sudo xrandr --output DP-2 --left-of LVDS-1'
