@@ -126,8 +126,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # lock screen (lock the current session with the given picture)
-bindsym $mod+x exec "i3lock --dpms -i ~/.i3/pictures/bgd.png"
-exec xautolock -time 10 -locker 'i3lock --dpms -i ~/.i3/pictures/bgd.png' &
+bindsym $mod+x exec "i3lock --dpms -i ~/.i3/pictures/background.png"
+exec xautolock -time 10 -locker 'i3lock --dpms -i ~/.i3/pictures/background.png' &
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -165,7 +165,7 @@ bar {
 bindsym $mod+Shift+minus move scratchpad
 
 # set background picture
-exec "feh --bg-scale ~/.i3/pictures/bgd.png"
+exec "feh --bg-scale ~/.i3/pictures/background.png"
 
 # # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
@@ -192,7 +192,7 @@ bindcode $mod+69 exec amixer set Master 5%+
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-bindsym XF86Sleep exec "i3lock --dpms -i ~/.i3/pictures/bgd.png; sudo pm-suspend"
+bindsym XF86Sleep exec "i3lock --dpms -i ~/.i3/pictures/background.png; sudo pm-suspend"
 bindsym XF86Display exec arandr
 
 #bindsym XF86AudioMute exec amixer set Master toggle
