@@ -14,6 +14,8 @@
     rb = rebase
     whatadded = log --diff-filter=A
     ds = diff --staged
+    fap = fetch --all --prune --tags
+    sir = submodule update --init --recursive
 [svn]
     addAuthorFrom = true
     useLogAuthor = true
