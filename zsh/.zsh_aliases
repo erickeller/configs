@@ -60,3 +60,5 @@ alias salt='sudo salt'
 alias rssh='~/workspace/rlx3/bin/rlx3-ssh'
 # i3 xrandr setup work
 alias swork='sudo xrandr --output DisplayPort-1 --left-of LVDS'
+# in case there are too many keys in your .ssh folder
+alias sshp='ssh -o PubkeyAuthentication=no '
