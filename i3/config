@@ -127,7 +127,6 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # lock screen (lock the current session with the given picture)
 bindsym $mod+x exec "i3lock --dpms -i ~/.i3/pictures/background.png"
-exec xautolock -time 10 -locker 'i3lock --dpms -i ~/.i3/pictures/background.png' &
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -174,6 +173,7 @@ bindsym $mod+minus scratchpad show
 exec --no-startup-id nm-applet
 exec --no-startup-id gnome-sound-applet
 exec --no-startup-id /usr/libexec/gnome-settings-daemon
+exec --no-startup-id "xautolock -time 10 -locker 'i3lock --dpms -i ~/.i3/pictures/background.png'"
 
 # disable desktop when calling nautilus
 exec --no-startup-id "gsettings set org.gnome.desktop.background show-desktop-icons false"
