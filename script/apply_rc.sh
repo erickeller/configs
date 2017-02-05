@@ -69,14 +69,30 @@ you_complete_me()
     cd -
 }
 
-default_zsh_gnome-terminal()
+pimp_gnome-terminal()
 {
     sudo sh -c "sed -i 's#^Exec=gnome-terminal.*#Exec=gnome-terminal -x /bin/zsh#g' /usr/share/applications/gnome-terminal.desktop"
+    # install hackfont
+    sudo apt-get update && sudo apt-get install -y fonts-hack-ttf
+    cat << EOF > /tmp/dconf-custom.dump
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+visible-name='foobar'
+use-custom-command=true
+use-theme-transparency=false
+scrollback-unlimited=true
+use-system-font=false
+custom-command='/bin/zsh'
+font='Hack 12'
+
+[legacy]
+schema-version=uint32 3
+EOF
+    dconf load /org/gnome/terminal/ < /tmp/dconf-custom.dump
 }
 
 install_packages
 install_ohmyzsh
-default_zsh_gnome-terminal
+pimp_gnome-terminal
 #install_i3
 link_configuration
 you_complete_me
