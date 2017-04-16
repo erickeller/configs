@@ -6,10 +6,19 @@ source /etc/os-release
 SCRIPTDIR=`cd $(dirname $0); pwd`
 CONFIG_DIR=${SCRIPTDIR}/..
 
+sources_list_chrome()
+{
+sudo sh -c "cat << EOF > /etc/apt/sources.list.d/chrome-sable.list
+deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+EOF"
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+}
+
 install_packages()
 {
+sources_list_chrome
 sudo apt-get update
-sudo apt-get -y install vim-nox git gitk git-gui tig tmux autojump zsh
+sudo apt-get -y install vim-nox git gitk git-gui tig tmux autojump zsh google-chrome-stable
 }
 
 install_i3()
