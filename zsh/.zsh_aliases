@@ -52,9 +52,6 @@ alias lxc-ls="sudo lxc-ls -f"
 alias lxc-start="sudo lxc-start -n"
 alias lxc-stop="sudo lxc-stop -n"
 
-# docker aliases
-alias docker='sudo docker'
-
 # salt aliases
 alias salt='sudo salt'
 alias rssh='~/workspace/rlx3/bin/rlx3-ssh'
