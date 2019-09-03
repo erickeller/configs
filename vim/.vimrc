@@ -92,5 +92,4 @@ map <leader>r :RopeRename<CR>
 filetype plugin indent off
 " search
 nmap <leader>a <Esc>:Ack!
-set spell
 set background=dark
