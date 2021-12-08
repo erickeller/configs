@@ -173,13 +173,14 @@ bindsym $mod+minus scratchpad show
 exec --no-startup-id nm-applet
 exec --no-startup-id gnome-sound-applet
 exec --no-startup-id /usr/libexec/gnome-settings-daemon
-exec --no-startup-id "xautolock -time 10 -locker 'i3lock --dpms -i ~/.i3/pictures/background.png'"
+exec --no-startup-id "/usr/bin/xautolock -time 10 -locker 'i3lock --dpms -i ~/.i3/pictures/background.png'"
 
 # disable desktop when calling nautilus
 exec --no-startup-id "gsettings set org.gnome.desktop.background show-desktop-icons false"
 
 # also define a keybinding
 bindsym $mod+u exec --no-startup-id setxkbmap us
+bindsym $mod+g exec --no-startup-id setxkbmap ch
 
 # volume control (-:MOD + F2 +: MOD + F3 mute: MOD + F1)
 # in order to discover the key value use xev

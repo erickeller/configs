@@ -18,7 +18,7 @@ install_packages()
 {
 sources_list_chrome
 sudo apt-get update
-sudo apt-get -y install vim-nox git gitk git-gui tig tmux autojump zsh google-chrome-stable
+sudo apt-get --yes --no-install-recommends install vim-nox git gitk git-gui tig tmux autojump zsh google-chrome-stable vlc network-manager-openvpn-gnome network-manager-openvpn pyhton3-pip htop scrot xautolock
 }
 
 install_i3()
