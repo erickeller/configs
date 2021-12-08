@@ -73,6 +73,7 @@ you_complete_me()
     # required for building clang for python3
     export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python2.7/"
     sudo apt-get install -y build-essential cmake python3-dev
+    sudo pip3 install jedi
     cd ~/.vim/bundle/YouCompleteMe
     python3 ./install.py --clang-completer
     cd -
@@ -99,8 +100,26 @@ EOF
     dconf load /org/gnome/terminal/ < /tmp/dconf-custom.dump
 }
 
+install_docker()
+{
+    sudo sh -c 'apt-get install -y -qq apt-transport-https ca-certificates curl >/dev/null'
+    sudo sh -c 'curl -fsSL "https://download.docker.com/linux/ubuntu/gpg" | apt-key add -qq - >/dev/null'
+    sudo sh -c "echo 'deb [arch=amd64] https://download.docker.com/linux/ubuntu ${UBUNTU_CODENAME} edge' > /etc/apt/sources.list.d/docker.list"
+    sudo sh -c "apt-get update -qq >/dev/null"
+    sudo sh -c "apt-get install -y -qq --no-install-recommends docker-ce >/dev/null"
+}
+
+install_lxd()
+{
+    sudo apt-get purge lxd -y
+    sudo apt-get install snapd -y
+    sudo snap install lxd
+}
+
 install_packages
 install_ohmyzsh
+install_docker
+install_lxd
 pimp_gnome-terminal
 #install_i3
 link_configuration
