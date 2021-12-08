@@ -26,9 +26,12 @@ Bundle 'vim-scripts/pep8.git'
 Bundle 'fs111/pydoc.vim.git'
 Bundle 'mitechie/pyflakes-pathogen.git'
 Bundle 'wincent/Command-T.git'
+Bundle 'davidhalter/jedi-vim'
 
 " git plugin
 Bundle 'tpope/vim-fugitive.git'
+
+" autocomplete
 Bundle 'Valloric/YouCompleteMe'
 
 " tabstops are 2 spaces and expanded
@@ -92,4 +95,8 @@ map <leader>r :RopeRename<CR>
 filetype plugin indent off
 " search
 nmap <leader>a <Esc>:Ack!
+" set spell
+autocmd FileType gitcommit setlocal spell
 set background=dark
+
+:nnoremap gz :!zeal "<cword>"&<CR><CR>
