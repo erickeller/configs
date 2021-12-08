@@ -59,3 +59,4 @@ alias rssh='~/workspace/rlx3/bin/rlx3-ssh'
 alias swork='sudo xrandr --output DisplayPort-1 --left-of LVDS'
 # in case there are too many keys in your .ssh folder
 alias sshp='ssh -o PubkeyAuthentication=no '
+yt='docker run --rm -u $(id -u):$(id -g) -v $PWD:/data yt-dl:latest'
