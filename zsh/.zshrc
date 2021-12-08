@@ -52,7 +52,9 @@ fi
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/workspace/go
 
-export PATH=/usr/share/centrifydc/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/go/bin:$GOPATH/bin:$HOME/bin:~/bin:/snap/bin
+export PATH=/usr/share/centrifydc/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/go/bin:$GOPATH/bin:$HOME/bin:/snap/bin
+# overwrite default SHELL
+export SHELL=zsh
 
 if [ -z "$SSH_AUTH_SOCK" ] ; then
   eval `ssh-agent -s`
