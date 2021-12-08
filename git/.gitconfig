@@ -5,7 +5,7 @@
     branch = auto
 [user]
 	name = Eric Keller
-	email = eric.keller.ek1@roche.com
+	email = keller.eric@gmail.com
 [alias]
     st = status
     co = checkout
@@ -33,7 +33,3 @@
 
 [core]
 	editor = vi
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
