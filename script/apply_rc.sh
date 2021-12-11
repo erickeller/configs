@@ -25,8 +25,8 @@ sudo apt-get update
 sudo apt-get install i3 arandr feh acpi pavucontrol -y
 # i3 notify when battery is low
 sudo ln -sf ${SCRIPTDIR}/low_battery.sh /usr/local/bin/low_battery.sh
-sudo sh -c "cat << EOF > /var/spool/cron/crontabs/low_battery
-*/15 * * * * /usr/local/bin/low_battery.sh
+sudo sh -c "cat << EOF > /etc/cron.d/low_battery
+*/5 * * * * ${USER} /usr/local/bin/low_battery.sh
 EOF"
 }
 
