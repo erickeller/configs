@@ -76,9 +76,11 @@ pimp_gnome-terminal()
     sudo sh -c "sed -i 's#^Exec=gnome-terminal.*#Exec=gnome-terminal -x /bin/zsh#g' /usr/share/applications/gnome-terminal.desktop"
     # install hackfont
     sudo apt-get update && sudo apt-get install -y fonts-hack-ttf
+    # get all configurable parameters `gsettings list-keys org.gnome.Terminal.Legacy.Profile:/`
     cat << EOF > /tmp/dconf-custom.dump
 [legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
-visible-name='foobar'
+visible-name='hack'
+audible-bell=false
 use-custom-command=true
 use-theme-transparency=false
 scrollback-unlimited=true
