@@ -15,12 +15,12 @@ sudo apt-get --yes --no-install-recommends install vim-nox git gitk git-gui tig 
 
 install_i3()
 {
-sudo sh -c "cat << EOF > /etc/apt/sources.list.d/i3-wm.list
-deb http://debian.sur5r.net/i3/ ${UBUNTU_CODENAME} universe
-EOF"
-# we've returned to our user account
-sudo apt-get update
-sudo apt-get --allow-unauthenticated install sur5r-keyring
+KEYRING=$(curl --fail -sL https://i3wm.org/docs/repositories.html | grep apt-helper | cut -d' ' -f2- | tr -d '\r')
+echo "install latest keyring: '${KEYRING}'"
+eval ${KEYRING}
+sudo dpkg -i ./keyring.deb
+rm -f ./keyring.deb
+echo "deb [arch=amd64] http://debian.sur5r.net/i3/ ${UBUNTU_CODENAME} universe" | sudo tee /etc/apt/sources.list.d/i3-wm.list
 sudo apt-get update
 sudo apt-get install i3 arandr feh acpi pavucontrol -y
 # i3 notify when battery is low
