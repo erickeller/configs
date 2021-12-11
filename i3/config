@@ -164,7 +164,7 @@ bar {
 bindsym $mod+Shift+minus move scratchpad
 
 # set background picture
-exec "feh --bg-scale ~/.i3/pictures/background.png"
+exec "feh --bg-fill ~/.i3/pictures/background.png"
 
 # # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
