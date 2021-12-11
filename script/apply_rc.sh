@@ -6,19 +6,11 @@ source /etc/os-release
 SCRIPTDIR=`cd $(dirname $0); pwd`
 CONFIG_DIR=${SCRIPTDIR}/..
 
-sources_list_chrome()
-{
-sudo sh -c "cat << EOF > /etc/apt/sources.list.d/chrome-sable.list
-deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
-EOF"
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-}
-
 install_packages()
 {
-sources_list_chrome
-sudo apt-get update
-sudo apt-get --yes --no-install-recommends install vim-nox git gitk git-gui tig tmux autojump zsh google-chrome-stable vlc network-manager-openvpn-gnome network-manager-openvpn pyhton3-pip htop scrot xautolock
+
+sudo apt-get update -q > /dev/null
+sudo apt-get --yes --no-install-recommends install vim-nox git gitk git-gui tig tmux autojump zsh firefox vlc network-manager-openvpn-gnome network-manager-openvpn python3-pip htop scrot xautolock
 }
 
 install_i3()
