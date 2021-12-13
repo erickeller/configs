@@ -115,7 +115,7 @@ install_ohmyzsh
 install_docker
 install_lxd
 pimp_gnome-terminal
-#install_i3
+install_i3
 link_configuration
 you_complete_me
 
