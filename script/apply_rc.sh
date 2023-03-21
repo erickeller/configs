@@ -9,7 +9,7 @@ CONFIG_DIR=${SCRIPTDIR}/..
 install_packages()
 {
 sudo apt-get update -q > /dev/null
-sudo apt-get --yes --no-install-recommends install vim-nox git gitk git-gui tig tmux autojump zsh firefox vlc network-manager-openvpn-gnome network-manager-openvpn python3-pip htop scrot xautolock
+sudo apt-get --yes --no-install-recommends install vim-nox git gitk git-gui tig tmux autojump zsh firefox vlc network-manager-openvpn-gnome network-manager-openvpn python3-pip htop scrot xautolock flameshot
 sudo snap install slack --classic
 }
 
